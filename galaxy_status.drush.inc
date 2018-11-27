@@ -19,7 +19,7 @@ function galaxy_status_drush_command()
 /**
  * @throws \Exception
  */
-function drush_galaxy_status_annotations_check()
+function drush_galaxy_status_galaxy_check()
 {
     $emails = drush_get_option('emails', null);
 
