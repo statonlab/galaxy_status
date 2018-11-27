@@ -1,0 +1,5 @@
+name = Galaxy Status
+description = A description of what your module does.
+core = 7.x
+dependencies[] = mail_cli
+dependencies[] = tripal_galaxy

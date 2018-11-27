@@ -1,0 +1,13 @@
+<?php
+
+
+function galaxy_status_perform_checks() {
+    $instances = db_select('tripal_galaxy', 'T')->fields('T')->fetchAll();
+    foreach ($instances as $instance) {
+        $galaxy = tripal_galaxy_get_connection($instance->galaxy_id);
+    }
+
+    if($galaxy) {
+        var_dump($galaxy->getVersion());
+    }
+}
