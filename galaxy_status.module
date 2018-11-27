@@ -2,7 +2,7 @@
 
 
 function galaxy_status_perform_checks() {
-    $instances = db_select('tripal_galaxy', 'T')->fields('T')->fetchAll();
+    $instances = db_select('tripal_galaxy', 'T')->fields('T')->execute()->fetchAll();
     foreach ($instances as $instance) {
         $galaxy = tripal_galaxy_get_connection($instance->galaxy_id);
     }
